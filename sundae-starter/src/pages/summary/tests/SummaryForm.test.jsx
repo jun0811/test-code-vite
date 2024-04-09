@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import SummaryForm from '../summary/SummaryForm';
+import SummaryForm from '../SummaryForm';
 import { expect } from 'vitest';
 import userEvent from '@testing-library/user-event';
 
