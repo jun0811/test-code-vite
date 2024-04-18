@@ -1,7 +1,9 @@
 body,
 html,
 #root {
-  height: 100vh;
+  min-height: 100vh; /* 최소 높이를 화면의 높이로 설정 */
+  flex-direction: column; /* 자식 요소를 세로 방향으로 정렬 */
+  display: flex; /* Flexbox를 사용하여 자식 요소를 수직으로 정렬 */
 }
 #root {
   background-color: teal;

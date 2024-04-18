@@ -23,6 +23,7 @@ const SummaryForm = () => {
           onClick={() => {
             setAgree((pre) => !pre);
           }}
+          style={{ margin: '5px' }}
         />
         <label htmlFor="terms-conditions-agree">
           I agree to{' '}

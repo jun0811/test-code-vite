@@ -2,10 +2,9 @@ import SummaryForm from './SummaryForm';
 
 const OrderSummary = () => {
   return (
-    <div>
-      OrderSummary
+    <dic>
       <SummaryForm />
-    </div>
+    </dic>
   );
 };
 

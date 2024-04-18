@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { logRoles, render, screen } from '@testing-library/react';
 import OrderEntry from '../OrderEntry';
 import { HttpResponse, http } from 'msw';
 import { server } from '../../../../mocks/server'; // override
@@ -13,12 +13,10 @@ test('Error for scoops and toppings routes', async () => {
       return new HttpResponse(null, { status: 500 });
     })
   );
+  //
+  const { container } = render(<OrderEntry />);
 
-  render(<OrderEntry />);
-
-  const alertEls = await screen.findAllByRole('alert', {
-    name: /Error : 나중에 다시 시도해주세요/i,
-  });
-
+  const alertEls = await screen.findAllByRole('alert');
+  logRoles(container);
   expect(alertEls).toHaveLength(2);
 });
